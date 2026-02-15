@@ -26,11 +26,25 @@ export default function BackgroundVideo() {
   const [hero, showHero] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setVisible(true);
-    }, 3000);
+    const video = videoRef.current;
+    if (!video) return;
 
-    return () => clearTimeout(timer);
+    const STOP_AT = 4; // seconds
+    let stopped = false;
+
+    const onTimeUpdate = () => {
+      if (!stopped && video.currentTime >= STOP_AT) {
+        video.pause(); // allowed ONCE
+        stopped = true; // prevent future pauses
+        video.removeEventListener("timeupdate", onTimeUpdate);
+      }
+    };
+
+    video.addEventListener("timeupdate", onTimeUpdate);
+
+    return () => {
+      video.removeEventListener("timeupdate", onTimeUpdate);
+    };
   }, []);
 
   useEffect(() => {
@@ -66,6 +80,7 @@ export default function BackgroundVideo() {
           <video
             ref={videoRef}
             autoPlay
+            playsInline // 🔑 critical for iOS
             muted
             className=" object-cover w-screen h-screen top-0 left-0 -z-1 opacity-65"
           >
