@@ -29,6 +29,9 @@ importers:
       gsap:
         specifier: ^3.14.2
         version: 3.14.2
+      hamburger-react:
+        specifier: ^2.5.2
+        version: 2.5.2(react@19.2.3)
       lucide-react:
         specifier: ^0.563.0
         version: 0.563.0(react@19.2.3)
@@ -1958,6 +1961,11 @@ packages:
 
   gsap@3.14.2:
     resolution: {integrity: sha512-P8/mMxVLU7o4+55+1TCnQrPmgjPKnwkzkXOK1asnR9Jg2lna4tEY5qBJjMmAaOBDDZWtlRjBXjLa0w53G/uBLA==}
+
+  hamburger-react@2.5.2:
+    resolution: {integrity: sha512-xsv/I7wQX1RDaulDnvMVCXMMRXnkwnUnkE8seD5eNVZJ4nIrjtK5LLA20l5x/pJ+mPWOzlFxW32VJ86Gbo2Njw==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18 || ^19
 
   has-bigints@1.1.0:
     resolution: {integrity: sha512-R3pbpkcIqv2Pm3dUwgjclDRVmWpTJW2DcMzcIhEXEx1oh/CEMObMm3KLmRJOdvhM7o4uQBnwr8pzRK2sJWIqfg==}
@@ -4887,6 +4895,10 @@ snapshots:
   graceful-fs@4.2.11: {}
 
   gsap@3.14.2: {}
+
+  hamburger-react@2.5.2(react@19.2.3):
+    dependencies:
+      react: 19.2.3
 
   has-bigints@1.1.0: {}
 

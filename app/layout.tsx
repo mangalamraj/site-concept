@@ -35,9 +35,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative w-full">
-            <NavbarComponent />
-          </div>
           {children}
         </ThemeProvider>
       </body>

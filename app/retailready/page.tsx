@@ -7,6 +7,7 @@ import { FaqComponent } from "@/components/faq/faqComponent";
 import Features from "@/components/features/features";
 import HeroSection from "@/components/hero/heroSection";
 import MarketingSection from "@/components/marketing/marketingSection";
+import { NavbarComponent } from "@/components/navbar/navbar";
 import Process from "@/components/process/process";
 import StakeHolders from "@/components/stakeholders/stakeholders";
 import TextReveal from "@/components/textReveal/textReveal";
@@ -19,6 +20,9 @@ import { Zap, ClockCheck, Smartphone, Cog } from "lucide-react";
 export default function Home() {
   return (
     <div className="m-auto bg-zinc-50 w-full font-sans flex flex-col md:gap-30 gap-20  dark:bg-black overflow-hidden">
+      <div className="relative w-full">
+        <NavbarComponent />
+      </div>
       <BackgroundRippleEffect rows={80} cols={40} />
       <HeroSection
         badgeText="YC Backed"
