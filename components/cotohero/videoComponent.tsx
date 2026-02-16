@@ -25,6 +25,11 @@ export default function BackgroundVideo() {
   const [playbackRate, setPlaybackRate] = useState(0.7);
   const [visible, setVisible] = useState(false);
   const [hero, showHero] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setVisible(true);
+    }, 3000);
+  });
 
   useEffect(() => {
     const video = videoRef.current;
