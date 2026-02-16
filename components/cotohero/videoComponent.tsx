@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import { Cross, MoveRight, X } from "lucide-react";
 import TrustedBy from "../trustedBy/trustedBy";
 import MenuOverlay from "../menuOverlay/menu";
+import { TextAnimate } from "../ui/text-animate";
 
 const neuton = Merriweather({
   subsets: ["latin"],
@@ -109,18 +110,36 @@ export default function BackgroundVideo() {
           )}
 
           <div className="absolute top-1/2 left-1/2 -translate-1/2 flex flex-col gap-1 justify-between items-center w-full">
-            <div
+            <TextAnimate
+              animation="blurInUp"
+              duration={0.6}
+              once
+              by="word"
+              segmentClassName={`2xl:text-[114px] xl:text-[104px] text-4xl xl:leading-28 tracking-tight  text-center ${neuton.className} [word-spacing:--spacing(-1)] `}
+            >
+              crafted for
+            </TextAnimate>
+            <TextAnimate
+              animation="blurInUp"
+              duration={0.6}
+              delay={0.8}
+              once
+              by="word"
               className={`2xl:text-[114px] xl:text-[104px] text-4xl xl:leading-28 tracking-tight  text-center ${neuton.className} [word-spacing:--spacing(-1)] `}
             >
-              crafted for <br />
-              <span className="inline w-fill"> businesses </span>
-            </div>
-            <p
+              businesses
+            </TextAnimate>
+            <TextAnimate
+              animation="blurInUp"
+              duration={0.6}
+              delay={1}
+              once
+              by="word"
               className={`mx-auto xl:mt-6 xl:max-w-4xl font-medium w-[80%] text-center xl:text-lg 2xl:text-xl text-sm leading-relaxed text-white/95 dark:text-white/90 ${poppins.className}`}
             >
               Seamlessly issue, manage, and track your business expenses with
               CotoPay’s UPI vouchers powered by e-RUPI.
-            </p>
+            </TextAnimate>
             <div className="md: mt-10">
               <Button
                 variant={"outline"}
