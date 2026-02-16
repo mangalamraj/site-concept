@@ -125,7 +125,7 @@ export default function BackgroundVideo() {
               delay={0.8}
               once
               by="word"
-              className={`2xl:text-[114px] xl:text-[104px] text-4xl xl:leading-28 tracking-tight  text-center ${neuton.className} [word-spacing:--spacing(-1)] `}
+              className={`2xl:text-[114px] xl:text-[104px] text-4xl xl:leading-28 tracking-tight  text-center ${neuton.className} [word-spacing:--spacing(-1)] md:-mt-2`}
             >
               businesses
             </TextAnimate>
@@ -140,7 +140,9 @@ export default function BackgroundVideo() {
               Seamlessly issue, manage, and track your business expenses with
               CotoPay’s UPI vouchers powered by e-RUPI.
             </TextAnimate>
-            <div className="md: mt-10">
+            <div className="group md: mt-10 relative w-fit overflow-hidden shadow-2xl cursor-pointer">
+              <div className="h-20 w-10 -top-4 bg-linear-to-r from-white/10 via-white/50 to-white/10 absolute -left-16 group-hover:left-[150%] duration-700 blur-sm -rotate-45" />
+
               <Button
                 variant={"outline"}
                 className="rounded-none p-6 flex justify-center items-center text-gray-200 cursor-pointer border-[#FEC288]"
