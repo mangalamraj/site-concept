@@ -149,22 +149,22 @@ export default function Home() {
           {
             title: "Centralize Operational Data",
             desc: "Connect infrastructure, workflows, and enterprise systems into a unified operational layer.",
-            image: "/p1.webp",
+            image: "/p1.svg",
           },
           {
             title: "Automate Workflow Coordination",
             desc: "Trigger intelligent workflows, routing, escalations, and actions across teams and systems.",
-            image: "/p2.webp",
+            image: "/p2.svg",
           },
           {
             title: "Monitor Operations in Real Time",
             desc: "Track operational performance, infrastructure health, and execution metrics through live dashboards.",
-            image: "/p3.webp",
+            image: "/p3.svg",
           },
           {
             title: "Scale Autonomous Operations",
             desc: "Deploy AI-powered operational agents that continuously optimize workflows and execution.",
-            image: "/p4.webp",
+            image: "/p4.svg",
           },
         ]}
       />

@@ -60,10 +60,10 @@ const MarketingSection = ({
         </div>
       </div>
 
-      <div className="absolute w-[120%] m-auto flex items-center">
+      <div className="absolute w-[120%] left-1 m-auto flex items-center">
         <div className="w-full h-[420px] m-auto z-0">
           <Image
-            src="/line2.svg"
+            src="/dline.svg"
             alt="transition line"
             fill
             className="object-contain m-auto dark:opacity-95 opacity-25"

@@ -128,22 +128,22 @@ export default function Home() {
           {
             title: "Smart Order Processing",
             desc: "Start your fulfillment journey with our intuitive mobile interface. Directed packout workflows ensure accuracy from the first step.",
-            image: "/p1.webp",
+            image: "/p1.svg",
           },
           {
             title: "Proactive Compliance Checks",
             desc: "Prevent costly mistakes before they happen. Our system automatically validates retailer requirements, ensuring every SKU meets compliance standards before shipping.",
-            image: "/p2.webp",
+            image: "/p2.svg",
           },
           {
             title: "Guided Packaging Process",
             desc: "Follow clear, step-by-step instructions for proper labeling and packaging. Our system ensures every box is correctly labeled and ready for shipment.",
-            image: "/p3.webp",
+            image: "/p3.svg",
           },
           {
             title: "Verified Success",
             desc: "Celebrate each perfectly packed order! Our system confirms successful completion, giving you confidence that every shipment meets the highest standards.",
-            image: "/p4.webp",
+            image: "/p4.svg",
           },
         ]}
       />

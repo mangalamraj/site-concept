@@ -33,9 +33,8 @@ export function CTA() {
             </h1>
             <p></p>
             <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-              Many warehouses have already transformed their operations with
-              RetailReady. Experience how our platform can revolutionize your
-              supply chain compliance.
+              Teams across industries use modern platforms to streamline
+              operations, improve efficiency, and scale with confidence.
             </p>
             <div className="group relative overflow-hidden rounded-full dark:shadow-xl shadow-lg shadow-gray-500/50 z-2 w-35 m-auto">
               <div className="h-20 w-10 -top-4 bg-linear-to-r from-white/10 via-white/50 to-white/10 absolute -left-16 group-hover:left-[150%] duration-700 blur-sm  -rotate-45 " />
