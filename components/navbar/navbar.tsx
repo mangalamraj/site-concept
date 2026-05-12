@@ -16,7 +16,7 @@ import { useState } from "react";
 import { ModeToggle } from "../common/modetoggler";
 
 interface NavbarComponentProps {
-  navItems: {
+  navItems?: {
     name: string;
     link: string;
   }[];
