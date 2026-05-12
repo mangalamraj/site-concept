@@ -77,7 +77,7 @@ export function NavbarComponent({
           isOpen={isMobileMenuOpen}
           onClose={() => setIsMobileMenuOpen(false)}
         >
-          {navItems.map((item, idx) => (
+          {navItems?.map((item, idx) => (
             <a
               key={`mobile-link-${idx}`}
               href={item.link}
