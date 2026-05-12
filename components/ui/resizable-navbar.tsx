@@ -229,33 +229,42 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({
+  text,
+  lightLogo,
+  darkLogo,
+}: {
+  text?: string;
+  lightLogo?: string;
+  darkLogo?: string;
+}) => {
   return (
     <a
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <img
-        src="/pp.webp"
+        src={lightLogo}
         alt="logo"
-        width={50}
-        height={30}
+        width={20}
+        height={20}
         className="dark:hidden block"
       />
+
       <img
-        src="/ppw.png"
+        src={darkLogo}
         alt="logo"
-        width={50}
+        width={30}
         height={30}
         className="hidden dark:block"
       />
-      <span className="font-medium text-black dark:text-white">
-        Retail Ready
+
+      <span className="dark:font-medium text-2xl font-semibold text-black dark:text-white">
+        {text}
       </span>
     </a>
   );
 };
-
 export const NavbarButton = ({
   href,
   as: Tag = "a",

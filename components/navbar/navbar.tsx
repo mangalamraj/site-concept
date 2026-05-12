@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Navbar,
   NavBody,
@@ -10,44 +11,62 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+
 import { useState } from "react";
 import { ModeToggle } from "../common/modetoggler";
 
-export function NavbarComponent() {
-  const navItems = [
-    {
-      name: "Home",
-      link: "#home",
-    },
-    {
-      name: "Case Studies",
-      link: "#casestudies",
-    },
-    {
-      name: "About",
-      link: "#about",
-    },
-  ];
+interface NavbarComponentProps {
+  navItems: {
+    name: string;
+    link: string;
+  }[];
 
+  logoText?: string;
+
+  logoLight?: string;
+  logoDark?: string;
+
+  buttonText?: string;
+  buttonHref?: string;
+}
+
+export function NavbarComponent({
+  navItems,
+  logoText,
+  logoLight,
+  logoDark,
+  buttonText,
+  buttonHref,
+}: NavbarComponentProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <Navbar className="">
+    <Navbar>
       <NavBody>
-        <NavbarLogo />
+        <NavbarLogo text={logoText} lightLogo={logoLight} darkLogo={logoDark} />
+
         <NavItems items={navItems} />
 
         <div className="flex flex-col md:flex-row items-center gap-4 z-50">
-          <NavbarButton className="rounded-2xl bg-white md:bg-black text-white">
-            Login
+          <NavbarButton
+            href={buttonHref}
+            className="rounded-2xl bg-white md:bg-black text-white"
+          >
+            {buttonText}
           </NavbarButton>
+
           <ModeToggle />
         </div>
       </NavBody>
 
       <MobileNav>
         <MobileNavHeader>
-          <NavbarLogo />
+          <NavbarLogo
+            text={logoText}
+            lightLogo={logoLight}
+            darkLogo={logoDark}
+          />
+
           <MobileNavToggle
             isOpen={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -68,13 +87,15 @@ export function NavbarComponent() {
               <span className="block">{item.name}</span>
             </a>
           ))}
+
           <div className="flex w-full flex-col gap-4">
             <NavbarButton
+              href={buttonHref}
               onClick={() => setIsMobileMenuOpen(false)}
               variant="primary"
               className="w-full"
             >
-              Login
+              {buttonText}
             </NavbarButton>
           </div>
         </MobileNavMenu>

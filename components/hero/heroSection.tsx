@@ -26,7 +26,7 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   return (
     <div className="max-w-380 w-[90%] m-auto flex flex-col gap-5 md:gap-10 justify-center md:items-center">
-      <div className="relative m-auto flex flex-col md:gap-4 gap-2 items-start md:items-center md:text-center mt-36 md:mt-60">
+      <div className="relative m-auto flex flex-col md:gap-4 gap-2 items-start md:items-center md:text-center mt-36 md:mt-40">
         <div
           className={cn(
             "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",

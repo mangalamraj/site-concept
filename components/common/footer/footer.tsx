@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer-sec">
         <div className="footerparent">
           <div className="footer-header">
-            <img src="/ppw.png" className="manik" alt="" />
+            {/*<img src="/ppw.png" className="manik" alt="" />*/}
             <hr className="backdrop-opaci" />
           </div>
           <div className="main ">

@@ -18,7 +18,7 @@ const DisplayImage = () => {
       <div className="md:border-2 border rounded-xl bg-gray-300/30 dark:bg-zinc-600/40 md:w-[70%] m-auto">
         <div className="md:m-4 m-1 border-2 rounded-xl bg-gray-400/20 dark:bg-zinc-800/20 md:p-2 p-1">
           <img
-            src="/dashboard1.png"
+            src="/dboard.png"
             alt="dashboard"
             className="w-full h-auto rounded-lg"
           />
