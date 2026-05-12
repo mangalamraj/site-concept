@@ -22,7 +22,7 @@ interface NavBodyProps {
 }
 
 interface NavItemsProps {
-  items: {
+  items?: {
     name: string;
     link: string;
   }[];
@@ -123,7 +123,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         className,
       )}
     >
-      {items.map((item, idx) => (
+      {items?.map((item, idx) => (
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
